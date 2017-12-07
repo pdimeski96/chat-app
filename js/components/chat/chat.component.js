@@ -1,5 +1,6 @@
 /**
  * Component controllers sending/received messages
+ *
  */
 
 'use strict';
