@@ -1,0 +1,13 @@
+<div>
+    <h3>Chat with: {{vm.sSelectedUser}}</h3>
+    <ul>
+        <li ng-repeat="message in vm.aMsg track by $index">
+            <strong>{{message.from}}</strong>: <span>{{message.msg}}</span>
+        </li>
+    </ul>
+    <input ng-model="vm.sNewMessage" type="text" ng-keyup="vm.keyup()" ng-change="vm.change()" ng-keydown="vm.keydown()"> <button type="button" ng-click="vm.sendMessage()">Send</button>
+    <p>{{vm.sStatus}}</p>
+</div>
+<a ui-sref="users">
+    <button ng-click="vm.leaveRoom()" type="button">Close</button>
+</a>

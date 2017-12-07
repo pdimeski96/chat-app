@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h3>Online Users: Logged in as {{vm.sCurrentUser}}</h3>
+        <p>{{vm.sErrMsg}}</p>
+        <!-- or a string directly //-->
+        <img gravatar-src="vm.sCurrentUser" gravatar-size="100">
+        <ul>
+            <li ng-repeat="users in vm.aUsers track by $index">
+                <a ui-sref="users.chat({selectedUser: users})" ng-click="vm.createChat(users)">{{users}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--Insert Chat component-->
+<ui-view></ui-view>
+</div>
+<a ui-sref="login">
+    <button ng-click="vm.removeUser()" type="button">Logout</button>
+</a>
