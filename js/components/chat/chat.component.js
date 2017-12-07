@@ -26,7 +26,7 @@ function ChatController($scope,socket,$stateParams,$timeout){
 
     /**
      * OnSend event handler, constructs and sends message to server
-     * for processing!
+     * for processing!!
      *
      */
     vm.sendMessage = ()=>{
